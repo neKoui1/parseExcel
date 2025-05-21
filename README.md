@@ -1,0 +1,2 @@
+# parseExcel
+根据wechat聊天记录解析生成json文件方便LLM处理
