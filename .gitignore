@@ -1,0 +1,38 @@
+.xls
+.xlsx
+.xlsm
+.xlsb
+.xlt
+.xltx
+.xltm
+*.xls
+*.xlsx
+*.xlsm
+*.xlsb
+*.xlt
+*.xltx
+*.xltm
+*.csv
+*.json
+*.log
+*.txt
+# Node.js依赖
+node_modules/
+
+# TypeScript编译输出
+dist/
+build/
+
+# 日志文件
+*.log
+
+# 输出的JSON文件（如不需要保留历史输出）
+src/output/
+output/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 临时文件
+*.tmp
