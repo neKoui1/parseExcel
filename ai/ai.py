@@ -11,6 +11,7 @@ BASEURL=config['DS']['BASEURL']
 APIKEY=config['DS']['APIKEY']
 AZURE_AI_41_KEY=config['Azure']['AZURE_AI_41_KEY']
 AZURE_AI_41_ENDPOINT=config['Azure']['AZURE_AI_41_ENDPOINT']
+PROMTP=config['Prompt']['PROMPT']
 # print(AZURE_AI_41_KEY)
 # print(AZURE_AI_41_ENDPOINT)
 
