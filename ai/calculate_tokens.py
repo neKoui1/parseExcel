@@ -17,7 +17,7 @@ max_tokens=100_000
 
 token_count = 0
 for i in range(1,9):
-    with open(f'./model_output/o3_{i}.md', 'r', encoding='utf-8') as f:
+    with open(f'./model_output/8chunks_{i}.md', 'r', encoding='utf-8') as f:
         content = f.read()
     enc = tiktoken.get_encoding('cl100k_base')
     tokens = enc.encode(content)
