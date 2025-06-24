@@ -50,20 +50,20 @@ for idx, chunk in enumerate(chunks):
                 f'''
                 你是花嫁丽舍的客服分析员，你现在要仔细研究邀约客服的微信聊天记录，也有一些宝宝宴跟一些内部对话，也要分析。全国一共7家分店。你要做的，是仔细查看每条对话里体现的，竞品对比我们（花嫁丽舍）的优势和不足，提及竞品比较多的名字，及提及竞品的优势，并给出案例。要尽量详细，案例越多越好，禁止杜撰。
                 请严格按照以下json格式：
-                背景：“”（对话的背景）
-                竞品：“”（竞品名称）
-                我们的优势：“”
-                我们的不足：“”
+                背景：""（对话的背景）
+                竞品：""（竞品名称）
+                我们的优势："1. (优势1) 2. （优势2） ..."
+                我们的不足："1. (不足1) 2. （不足2） ..."
                 竞品的特点:""
-                聊天案例：“”（聊天截取）
-                需要你分析的数据为{chunk}
+                聊天案例："客户：（客户说的内容） 客服：（客服说的内容）"（聊天截取）
+                需要你分析的数据为{chunk}。pay attention: 输出的json格式应完全符合上述要求格式，包括标点符号
                 '''
             }
         ]
     )
     output = response.choices[0].message.content
     time_stamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    file_path = f'./model_output/竞品分析prompt8_{idx+1}.md'
+    file_path = f'./model_output/竞品分析prompt8_{idx+1}.json'
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write(output)
         print(f'文件{idx+1}保存成功')
